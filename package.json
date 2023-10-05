@@ -209,6 +209,7 @@
         "css-loader": "^3.4.2",
         "cssnano": "^4.1.10",
         "cypress": "3.8.2",
+        "postcss": "^8.4.31",
         "deepmerge": "^4.2.2",
         "draft-js": "^0.10.1",
         "enzyme": "^3.11.0",
@@ -374,7 +375,6 @@
         "ip": "1.1.8"
     },
     "dependencies": {
-        "@box/blueprint-web": "^4.3.0",
-        "postcss": "^8.4.31"
+        "@box/blueprint-web": "^4.3.0"
     }
 }

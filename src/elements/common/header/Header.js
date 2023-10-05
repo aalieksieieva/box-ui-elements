@@ -6,6 +6,7 @@
 
 import React from 'react';
 import { injectIntl } from 'react-intl';
+import { SearchInput } from '@box/blueprint-web';
 import Logo from './Logo';
 import messages from '../messages';
 import { VIEW_FOLDER, VIEW_SEARCH } from '../../../constants';
@@ -35,7 +36,7 @@ const Header = ({ isHeaderLogoVisible = true, view, isSmall, searchQuery, onSear
         <div className="be-header">
             {isHeaderLogoVisible && <Logo isSmall={isSmall} url={logoUrl} />}
             <div className="be-search">
-                <input
+                <SearchInput
                     aria-label={searchMessage}
                     data-testid="be-Header-searchInput"
                     disabled={!isFolder && !isSearch}

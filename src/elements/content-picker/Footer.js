@@ -8,7 +8,7 @@ import React from 'react';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import type { Node } from 'react';
 
-import { Button, Tooltip, TooltipProvider } from '@box/blueprint-web';
+import { Button, IconButton, Tooltip, TooltipProvider } from '@box/blueprint-web';
 import type { Collection, BoxItem } from '../../common/types/core';
 // import Button from '../../components/button';
 import ButtonGroup from '../../components/button-group';
@@ -65,7 +65,7 @@ const Footer = ({
         <footer className="bcp-footer">
             <div className="bcp-footer-left">
                 {showSelectedButton && !isSingleSelect && (
-                    <Button className="bcp-selected" onClick={onSelectedClick} type="button">
+                    <Button onClick={onSelectedClick}>
                         <FormattedMessage
                             className="bcp-selected-count"
                             {...messages.selected}
@@ -95,9 +95,11 @@ const Footer = ({
                     <ButtonGroup className="bcp-footer-actions">
                         <TooltipProvider root="root">
                             <Tooltip content={cancelButtonLabel || cancelMessage}>
-                                <Button aria-label={cancelMessage} onClick={onCancel} type="button">
-                                    <IconClose height={16} width={16} />
-                                </Button>
+                                <IconButton
+                                    aria-label={cancelMessage}
+                                    onClick={onCancel}
+                                    icon={<IconClose height={16} width={16} />}
+                                />
                             </Tooltip>
                             <Tooltip isDisabled={isChooseButtonDisabled} content={chooseButtonLabel || chooseMessage}>
                                 <Button

@@ -31,12 +31,12 @@ const outputPath = outputDir ? path.resolve(outputDir) : path.resolve('dist', ve
 const Translations = new TranslationsPlugin();
 const entries = {
     picker: path.resolve('src/elements/wrappers/ContentPickers.js'),
-    uploader: path.resolve('src/elements/wrappers/ContentUploader.js'),
-    explorer: path.resolve('src/elements/wrappers/ContentExplorer.js'),
-    preview: path.resolve('src/elements/wrappers/ContentPreview.js'),
-    sidebar: path.resolve('src/elements/wrappers/ContentSidebar.js'),
-    openwith: path.resolve('src/elements/wrappers/ContentOpenWith.js'),
-    sharing: path.resolve('src/elements/wrappers/ContentSharing.js'),
+    // uploader: path.resolve('src/elements/wrappers/ContentUploader.js'),
+    // explorer: path.resolve('src/elements/wrappers/ContentExplorer.js'),
+    // preview: path.resolve('src/elements/wrappers/ContentPreview.js'),
+    // sidebar: path.resolve('src/elements/wrappers/ContentSidebar.js'),
+    // openwith: path.resolve('src/elements/wrappers/ContentOpenWith.js'),
+    // sharing: path.resolve('src/elements/wrappers/ContentSharing.js'),
 };
 const entriesToBuild =
     typeof process.env.ENTRY === 'string'
@@ -80,7 +80,7 @@ function getConfig(isReactExternalized) {
         },
         devServer: {
             host: '0.0.0.0',
-            stats,
+            // stats,
         },
         resolveLoader: {
             modules: [path.resolve('src'), path.resolve('node_modules')],
