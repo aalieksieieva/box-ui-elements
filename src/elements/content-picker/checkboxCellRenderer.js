@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import Checkbox from '../../components/checkbox/Checkbox';
+import { Checkbox } from '@box/blueprint-web';
 import isRowSelectable from './cellRendererHelper';
 import type { BoxItem } from '../../common/types/core';
 

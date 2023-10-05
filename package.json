@@ -111,8 +111,7 @@
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged",
-            "pre-push": "./scripts/prepush.sh",
-            "commit-msg": "commitlint -e"
+            "pre-push": "./scripts/prepush.sh"
         }
     },
     "engines": {
@@ -183,7 +182,7 @@
         "@typescript-eslint/eslint-plugin": "^4.11.1",
         "@typescript-eslint/parser": "^4.11.1",
         "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
-        "autoprefixer": "^9.7.4",
+        "autoprefixer": "10.2.5",
         "axios": "0.25.0",
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^10.0.3",
@@ -249,7 +248,7 @@
         "lint-staged": "^9.5.0",
         "lodash": "^4.17.15",
         "message-accumulator": "^2.1.1",
-        "mini-css-extract-plugin": "^0.9.0",
+        "mini-css-extract-plugin": "^2.7.6",
         "mocha": "^6.2.2",
         "mousetrap": "^1.6.3",
         "mutationobserver-shim": "^0.3.3",
@@ -258,8 +257,8 @@
         "optimize-css-assets-webpack-plugin": "^5.0.3",
         "ora": "^4.0.3",
         "pikaday": "^1.8.0",
-        "postcss-loader": "^3.0.0",
-        "postcss-safe-parser": "^4.0.1",
+        "postcss-loader": "^7.3.3",
+        "postcss-safe-parser": "4.0.2",
         "prettier": "^1.19.1",
         "prettier-eslint-cli": "^5.0.0",
         "prop-types": "^15.7.2",
@@ -314,10 +313,10 @@
         "uniqid": "^5.2.0",
         "uuid": "^8.3.2",
         "wait-on": "^3.3.0",
-        "webpack": "^4.41.5",
-        "webpack-bundle-analyzer": "^3.6.0",
-        "webpack-cli": "^3.3.10",
-        "webpack-dev-server": "^3.10.1",
+        "webpack": "^5.75.0",
+        "webpack-bundle-analyzer": "^4.9.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "4.15.1",
         "worker-farm": "^1.7.0",
         "yargs": "^15.1.0"
     },
@@ -373,5 +372,9 @@
     },
     "resolutions": {
         "ip": "1.1.8"
+    },
+    "dependencies": {
+        "@box/blueprint-web": "^4.3.0",
+        "postcss": "^8.4.31"
     }
 }

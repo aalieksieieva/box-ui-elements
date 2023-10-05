@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import EmptyState from '../common/empty-state';
+import { EmptyState } from '@box/blueprint-web';
 import ProgressBar from '../common/progress-bar';
 import ItemList from './ItemList';
 import { VIEW_ERROR, VIEW_SELECTED } from '../../constants';

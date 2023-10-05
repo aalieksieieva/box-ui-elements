@@ -74,6 +74,8 @@ function getConfig(isReactExternalized) {
                 'box-ui-elements-locale-data': path.resolve(`i18n/${language}`),
                 'box-locale-data': path.resolve(`node_modules/@box/cldr-data/locale-data/${language}`),
                 'rsg-components/Wrapper': path.join(__dirname, '../examples/Wrapper'), // for examples only
+                'react/jsx-runtime': require.resolve('react/jsx-runtime'),
+                'react/jsx-dev-runtime': require.resolve('react/jsx-dev-runtime'),
             },
         },
         devServer: {
@@ -96,6 +98,14 @@ function getConfig(isReactExternalized) {
                 {
                     test: /\.s?css$/,
                     use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+                },
+                {
+                    test: /\.m?js/,
+                    // include: /node_modules/,
+                    // type: 'javascript/auto',
+                    resolve: {
+                        fullySpecified: false,
+                    },
                 },
             ],
         },

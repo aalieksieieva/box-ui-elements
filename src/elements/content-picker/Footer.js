@@ -8,15 +8,16 @@ import React from 'react';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import type { Node } from 'react';
 
+import { Button, Tooltip, TooltipProvider } from '@box/blueprint-web';
 import type { Collection, BoxItem } from '../../common/types/core';
-import Button from '../../components/button';
+// import Button from '../../components/button';
 import ButtonGroup from '../../components/button-group';
 import IconCheck from '../../icons/general/IconCheck';
 import IconClose from '../../icons/general/IconClose';
 import messages from '../common/messages';
 
-import PrimaryButton from '../../components/primary-button';
-import Tooltip from '../common/Tooltip';
+// import PrimaryButton from '../../components/primary-button';
+// import Tooltip from '../common/Tooltip';
 import './Footer.scss';
 
 type Props = {
@@ -92,22 +93,24 @@ const Footer = ({
                     })
                 ) : (
                     <ButtonGroup className="bcp-footer-actions">
-                        <Tooltip text={cancelButtonLabel || cancelMessage}>
-                            <Button aria-label={cancelMessage} onClick={onCancel} type="button">
-                                <IconClose height={16} width={16} />
-                            </Button>
-                        </Tooltip>
-                        <Tooltip isDisabled={isChooseButtonDisabled} text={chooseButtonLabel || chooseMessage}>
-                            <PrimaryButton
-                                aria-label={chooseMessage}
-                                disabled={isChooseButtonDisabled} // sets disabled attribute
-                                isDisabled={isChooseButtonDisabled} // used in Button component
-                                onClick={onChoose}
-                                type="button"
-                            >
-                                <IconCheck color="#fff" height={16} width={16} />
-                            </PrimaryButton>
-                        </Tooltip>
+                        <TooltipProvider root="root">
+                            <Tooltip content={cancelButtonLabel || cancelMessage}>
+                                <Button aria-label={cancelMessage} onClick={onCancel} type="button">
+                                    <IconClose height={16} width={16} />
+                                </Button>
+                            </Tooltip>
+                            <Tooltip isDisabled={isChooseButtonDisabled} content={chooseButtonLabel || chooseMessage}>
+                                <Button
+                                    aria-label={chooseMessage}
+                                    disabled={isChooseButtonDisabled} // sets disabled attribute
+                                    isDisabled={isChooseButtonDisabled} // used in Button component
+                                    onClick={onChoose}
+                                    type="button"
+                                >
+                                    <IconCheck color="#fff" height={16} width={16} />
+                                </Button>
+                            </Tooltip>
+                        </TooltipProvider>
                     </ButtonGroup>
                 )}
             </div>

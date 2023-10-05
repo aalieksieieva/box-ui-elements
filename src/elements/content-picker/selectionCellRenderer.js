@@ -5,8 +5,8 @@
  */
 
 import React from 'react';
-import Checkbox from '../../components/checkbox';
-import RadioButton from '../../components/radio/RadioButton';
+import { Checkbox, Radio as RadioButton } from '@box/blueprint-web';
+// import RadioButton from '../../components/radio/RadioButton';
 import isRowSelectable from './cellRendererHelper';
 import type { BoxItem } from '../../common/types/core';
 

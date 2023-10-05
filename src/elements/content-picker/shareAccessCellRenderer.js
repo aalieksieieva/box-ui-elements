@@ -6,9 +6,9 @@
 
 import React from 'react';
 import getProp from 'lodash/get';
+import { LoadingIndicator } from '@box/blueprint-web';
 import ShareAccessSelect from '../common/share-access-select';
 import isRowSelectable from './cellRendererHelper';
-import LoadingIndicator from '../../components/loading-indicator';
 import type { BoxItem } from '../../common/types/core';
 
 export default (
@@ -33,7 +33,7 @@ export default (
     const isLoading = !allowed_shared_link_access_levels;
 
     return isLoading ? (
-        <LoadingIndicator className="bcp-share-access-loading" />
+        <LoadingIndicator className="bcp-share-access-loading" aria-label="load" />
     ) : (
         <ShareAccessSelect
             canSetShareAccess={canSetShareAccess}

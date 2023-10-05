@@ -5,7 +5,7 @@
  */
 
 import React, { PureComponent } from 'react';
-import Modal from 'react-modal';
+import { Modal } from '@box/blueprint-web';
 import noop from 'lodash/noop';
 import omit from 'lodash/omit';
 
