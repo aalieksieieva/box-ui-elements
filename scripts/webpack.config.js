@@ -174,6 +174,26 @@ function getConfig(isReactExternalized) {
             },
             ...config.module.rules,
         ];
+        config.optimization = {
+            minimize: true,
+            sideEffects: true,
+            // minimizer: [
+            //     new CssMinimizerPlugin({
+            //         minimizerOptions: {
+            //             preset: [
+            //                 'default',
+            //                 {
+            //                     discardComments: { removeAll: true },
+            //                 },
+            //             ],
+            //             processorOptions: {
+            //                 safe: true,
+            //             },
+            //         },
+            //     }),
+            // ],
+            // ...config.optimization,
+        };
     }
 
     if (isRelease && language === 'en-US' && shouldAnalyzeBundles) {
